@@ -44,7 +44,9 @@ namespace HuaTuo
             }
         }
 
-        public static string DllBuildOutputDir => $"{Application.dataPath}/../Temp/HuaTuo/build";
+        public static string ProjectRootDir => Path.GetFullPath($"{Application.dataPath}/..");
+
+        public static string DllBuildOutputDir => Path.GetFullPath($"{Application.dataPath}/../Temp/HuaTuo/build");
 
         public static string GetDllBuildOutputDirByTarget(BuildTarget target)
         {
